@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
+
+.container{
+    font-family: 'Press Start 2P', cursive;
+    width: 100%;
+    margin-top: 3rem;
+    //height: 40rem;
+    position: absolute;
+
+    .title_container {
+        margin: 3rem 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .name {
+            margin: .2rem;
+            font-size: 25px;
+        }
+
+        .name2 {
+            margin: .2rem;
+            font-size: 25px;
+        }
+    }
+
+    .button_container {
+        margin: 0 5rem;
+                    display: flex;
+            justify-content: center;
+            align-items: center;
+
+        .button_stack {
+            margin-top: 8rem;
+            width: 50vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            a {
+                width: 100%;
+            }
+
+            .button {
+                font-family: inherit;
+                font-size: small;
+                color: black;
+                background-color: rgb(255, 255, 255);
+                width: 100%;
+            }
+        }
+    }
+}

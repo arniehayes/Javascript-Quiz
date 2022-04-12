@@ -1,5 +1,5 @@
 {
-  "name": "js-quiz",
+  "name": "Javascript-Quiz",
   "private": true,
   "scripts": {
     "dev": "next dev",

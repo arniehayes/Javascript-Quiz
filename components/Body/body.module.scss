@@ -2,9 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 
-
 .container{
     font-family: 'Press Start 2P', cursive;
+    font-weight: 900;
+    font-style: normal;
     width: 100%;
     margin-top: 3rem;
     //height: 40rem;
@@ -18,21 +19,24 @@
         flex-direction: column;
 
         .name {
-            margin: .2rem;
-            font-size: 25px;
-        }
-
-        .name2 {
-            margin: .2rem;
-            font-size: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            
+            p {
+                margin: .5rem;
+                font-size: 25px;
+                color: rgb(255, 96, 96);
+            }
         }
     }
 
     .button_container {
         margin: 0 5rem;
-                    display: flex;
-            justify-content: center;
-            align-items: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         .button_stack {
             margin-top: 8rem;

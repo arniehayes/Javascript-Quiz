@@ -9,22 +9,8 @@ const Body = () => {
         {/* TITLE */}
         <div className={style.title_container}>
           <div className={style.name}>
-            <span style={{ color: "red" }}>J</span>
-            <span style={{ color: "blue" }}>a</span>
-            <span style={{ color: "green" }}>v</span>
-            <span style={{ color: "yellow" }}>a</span>
-            <span style={{ color: "purple" }}>S</span>
-            <span style={{ color: "red" }}>c</span>
-            <span style={{ color: "green" }}>r</span>
-            <span style={{ color: "blue" }}>i</span>
-            <span style={{ color: "yellow" }}>p</span>
-            <span style={{ color: "red" }}>t</span>
-          </div>
-          <div className={style.name2}>
-            <span style={{ color: "white" }}>Q</span>
-            <span style={{ color: "white" }}>u</span>
-            <span style={{ color: "white" }}>i</span>
-            <span style={{ color: "white" }}>z</span>
+            <p>JavaScript</p>
+            <p>Quiz</p>
           </div>
         </div>
 

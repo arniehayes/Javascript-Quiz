@@ -21,6 +21,7 @@
     position: absolute;
 
     .title_container {
+        font-family: inherit;
         margin: 3rem 1rem;
         display: flex;
         justify-content: center;
@@ -28,12 +29,14 @@
         flex-direction: column;
 
         .name {
+            font-family: inherit;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
             
             p {
+                font-family: inherit;
                 margin: .5rem;
                 font-size: 28px;
                 color: rgb(255, 96, 96);

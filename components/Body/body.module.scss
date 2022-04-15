@@ -1,7 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
 
+//Video Game Font
+// font-family: 'Press Start 2P', cursive;
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 .container{
-    font-family: 'Secular One', sans-serif;
+    // font-family: 'Secular One', sans-serif;
+    font-family: 'Press Start 2P', cursive;
     font-weight: 900;
     font-style: normal;
     width: 100%;
@@ -24,7 +29,7 @@
             
             p {
                 margin: .5rem;
-                font-size: 35px;
+                font-size: 28px;
                 color: rgb(255, 96, 96);
             }
         }
@@ -49,7 +54,7 @@
 
             .button {
                 font-family: inherit;
-                font-size: 17px;
+                font-size: 15px;
                 color: black;
                 background-color: rgb(255, 255, 255);
                 width: 100%;

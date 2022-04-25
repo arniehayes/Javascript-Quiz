@@ -19,55 +19,141 @@
     margin-top: 3rem;
     //height: 40rem;
     position: absolute;
+}
 
-    .title_container {
+.title_container {
+    font-family: inherit;
+    margin: 3rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .title {
         font-family: inherit;
-        margin: 3rem 1rem;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-
-        .name {
+        
+        p {
             font-family: inherit;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            
-            p {
-                font-family: inherit;
-                margin: .5rem;
-                font-size: 28px;
-                color: rgb(255, 96, 96);
-            }
+            margin: .5rem;
+            font-size: 28px;
+            color: rgb(255, 96, 96);
         }
     }
+}
 
-    .button_container {
-        margin: 0 5rem;
+
+.button_container {
+    margin: 0 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .button_stack {
+        margin-top: 8rem;
+        width: 50vw;
         display: flex;
         justify-content: center;
         align-items: center;
 
-        .button_stack {
-            margin-top: 8rem;
-            width: 50vw;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        a {
+            width: 100%;
+        }
 
-            a {
-                width: 100%;
-            }
-
-            .button {
-                font-family: inherit;
-                font-size: 15px;
-                color: black;
-                background-color: rgb(255, 255, 255);
-                width: 100%;
-            }
+        .button {
+            font-family: inherit;
+            font-size: 15px;
+            color: black;
+            background-color: rgb(255, 255, 255);
+            width: 100%;
         }
     }
+}
+
+.child {
+    
+    ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+}
+
+.child, .child_2 li:nth-child(n) {
+    font-size: 40px;
+}
+.child li:nth-child(1):before {
+    content: "J";
+    color: red;
+}
+
+.child li:nth-child(2):before {
+    content: "a";
+    color: blue;
+}
+.child li:nth-child(3):before {
+    content: "v";
+    color: green;
+}
+.child li:nth-child(4):before {
+    content: "a";
+    color: yellow;
+}
+.child li:nth-child(5):before {
+    content: "s";
+    color: white;
+}
+.child li:nth-child(6):before {
+    content: "c";
+    color: red;
+}
+.child li:nth-child(7):before {
+    content: "r";
+    color: green;
+}
+.child li:nth-child(8):before {
+    content: "i";
+    color: blue;
+}
+.child li:nth-child(9):before {
+    content: "p";
+    color: yellow;
+}
+.child li:nth-child(10):before {
+    content: "t";
+    color: red;
+}
+
+.child_2{
+
+    ul{
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.child_2 li:nth-child(1):before {
+    content: "Q";
+    color: black;
+}
+
+.child_2 li:nth-child(2):before {
+    content: "u";
+    color: black;
+}
+.child_2 li:nth-child(3):before {
+    content: "i";
+    color: black;
+}
+.child_2 li:nth-child(4):before {
+    content: "z";
+    color: b;
 }

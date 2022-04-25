@@ -8,9 +8,29 @@ const Body = () => {
       <div className={style.container}>
         {/* TITLE */}
         <div className={style.title_container}>
-          <div className={style.name}>
-            <p>JavaScript</p>
-            <p>Quiz</p>
+          <div className={style.title}>
+            <div className={style.child}>
+              <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
+            <div className={style.child_2}>
+              <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
           </div>
         </div>
 

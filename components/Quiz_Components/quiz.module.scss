@@ -13,29 +13,29 @@
     justify-content: center;
     align-content: center;
     margin-top: 2rem;
-    
-    .question_container{
-        width: 100%;
-        min-height: 15rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+}
 
-        .code_block{
-            background-color: #32364e;
-            position: absolute;
+.question_container{
+    width: 100%;
+    min-height: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-            pre {
-                color: white;
-                padding-right: .5rem;
+.code_block{
+    background-color: #32364e;
+    position: absolute;
 
-                code {
-                    //max-width: 100%;
-                }
-            }
+    pre {
+        color: white;
+        padding-right: .5rem;
 
+        code {
+            //max-width: 100%;
         }
     }
+
 }
 
 .answers_container {
@@ -44,70 +44,72 @@
     align-items: center;
     // setting margins based on the screen width
     margin: 1rem calc(100vw / 5);
+}
 
-    .stack {
-        width: 100%;
+.stack {
+    width: 100%;
+}
 
-        .answer_button_wrapper {
+.button {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: black;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: .5rem;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
 
-            .button {
-                font-family: inherit;
-                font-size: 14px;
-                color: black;
-                background-color: rgb(255, 255, 255);
-                display: flex;
-                justify-content: flex-start;
-                align-items: center;
-                padding: .5rem;
-                border-radius: 5px;
-                border: none;
-                width: 100%;
-
-                span{
-                    padding-left: .1rem;
-                }
-
-                p{
-                    padding: 0;
-                    margin: 0;
-                    text-align: left;
-                }
-            }
-
-            .button:hover {
-                cursor: pointer;
-            }
-
-            .button:focus {
-                background-color: rgb(148, 148, 148);
-            }
-
-            .button_correct {
-                background-color: rgb(74, 216, 31);
-            }
-
-            .button_incorrect {
-                background-color: rgb(204, 42, 42);
-            }
-        }
-
-        .button_submit {
-            width: 100%;
-            margin-top: 1rem;
-            background-color: rgb(27, 172, 46);
-        }
-
-        .basic_button_container {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-
-            .button_basic {
-                margin-top: .5rem;
-            }
-        }
+    span{
+        padding-left: .1rem;
     }
+
+    p{
+        padding: 0;
+        margin: 0;
+        text-align: left;
+    }
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: rgb(185, 180, 180);
+}
+
+.button:focus {
+    background-color: rgb(79, 96, 131);
+}
+
+.button_correct {
+    background-color: rgb(74, 216, 31);
+}
+
+.button_incorrect {
+    background-color: rgb(204, 42, 42);
+}
+
+.button_submit {
+    width: 100%;
+    margin-top: 1rem;
+    background-color: rgb(27, 172, 46);
+
+    &:hover {
+        background-color: rgb(47, 117, 41);
+    }
+}
+
+.basic_button_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.button_basic {
+    margin-top: .5rem;
 }
 
 .solution_container {
@@ -123,16 +125,16 @@
     transform: translate(50%, -50%);
     display: flex;
     justify-content: flex-start;
+}
 
-    .info_container {
-        margin: .5rem;
-        position: relative;
-        overflow: auto;
-        line-height: normal;
+.info_container {
+    margin: .5rem;
+    position: relative;
+    overflow: auto;
+    line-height: normal;
+}
 
-        .info {
-            margin: 0;
-            font-size: 15px;
-        }
-    }
+.info {
+    margin: 0;
+    font-size: 15px;
 }

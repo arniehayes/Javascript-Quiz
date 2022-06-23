@@ -40,11 +40,11 @@ const Body = () => {
             <Link href="/Quiz">
               <a>
                 <Button variant="contained" className={style.button}>
-                  JavaScript
+                  Play
                 </Button>
               </a>
             </Link>
-            <Link href="/">
+            {/* <Link href="/">
               <a>
                 <Button variant="contained" className={style.button}>
                   React
@@ -57,7 +57,7 @@ const Body = () => {
                   Random
                 </Button>
               </a>
-            </Link>
+            </Link> */}
           </Stack>
         </div>
       </div>

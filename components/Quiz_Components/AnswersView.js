@@ -108,7 +108,6 @@ const Answers_View = () => {
         {
           // Buttons:
           // Checking if the answer is correct to show the two buttons.
-          // Current problem: Buttons work on first question but stay on the next question
         }
         {showBtn ? (
           <div className={style.basic_button_container}>

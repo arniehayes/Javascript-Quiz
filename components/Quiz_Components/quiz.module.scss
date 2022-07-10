@@ -82,28 +82,28 @@
 
 .button:hover {
     cursor: pointer;
-    background-color: rgb(185, 180, 180);
+    background-color: rgb(185, 180, 180) !important;
 }
 
 .button:focus {
-    background-color: rgb(126, 128, 133);
+    background-color: rgb(126, 128, 133) !important;
 }
 
 .button_correct {
-    background-color: rgb(74, 216, 31);
+    background-color: rgb(74, 216, 31) !important;
 }
 
 .button_incorrect {
-    background-color: rgb(204, 42, 42);
+    background-color: rgb(204, 42, 42) !important;
 }
 
 .button_submit {
     width: 100%;
     margin-top: 1rem;
-    background-color: rgb(27, 172, 46);
+    background-color: rgb(27, 172, 46) !important;
 
     &:hover {
-        background-color: rgb(47, 117, 41);
+        background-color: rgb(47, 117, 41) !important;
     }
 }
 

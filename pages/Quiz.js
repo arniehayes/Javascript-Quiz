@@ -5,6 +5,7 @@ import style from '../components/Quiz_Components/quiz.module.scss'
 import React, {useState } from "react";
 import SolutionWindow from "../components/Quiz_Components/SolutionWindow";
 import Modal from "@mui/material/Modal";
+import ProgressBar from '../components/Extras/ProgressBar';
 
 
 export const AddressContext = React.createContext();
@@ -44,6 +45,7 @@ const Quiz = () => {
             setModalIsOpen,
           }}
         >
+          <ProgressBar currentQuestion={currentQuestion} />
           {/* QUESTION COMPONENT */}
           <Question_View currentQuestion={currentQuestion} />
 
@@ -52,12 +54,16 @@ const Quiz = () => {
 
           {/* MODAL FOR SOLUTION BUTTON */}
           {showSolution ? (
-            <Modal open={modalIsOpen} onClose={handleClose} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">
+            <Modal
+              open={modalIsOpen}
+              onClose={handleClose}
+              aria-labelledby="modal-modal-title"
+              aria-describedby="modal-modal-description"
+            >
               {/*<button onClick={() => setModalIsOpen(false)}>x</button>*/}
               <SolutionWindow currentQuestion={currentQuestion} />
             </Modal>
           ) : null}
-
         </AddressContext.Provider>
       </div>
     </div>

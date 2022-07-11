@@ -22,7 +22,7 @@ export const questionArray = {
       ],
       correctAnswer: 3,
       reason:
-        "Within the function, we first declare the name variable with the var keyword. This means that the variable gets hoisted(memory space is set up during the creation phase) with the default value of undefined, until we actually get to the line where we define the variable.We haven't defined the variable yet on the line where we try to log the name variable, so it still holds the value of undefined. Variables with the let keyword (and const) are hoisted, but unlike var, don't get initialized.They are not accessible before the line we declare(initialize) them.This is called the temporal dead zone.When we try to access the variables before they are declared, JavaScript throws a ReferenceError.",
+        "Within the function, we first declare the name variable with the var keyword. This means that the variable gets hoisted(memory space is set up during the creation phase) with the default value of undefined, until we actually get to the line where we define the variable.We haven't defined the variable yet on the line where we try to log the name variable, so it still holds the value of undefined. Variables with the let keyword (and const) are hoisted, but unlike var, don't get initialized.They are not accessible before the line we declare(initialize) them.This is called the temporal dead zone.When we try to access the variables before they are declared, JavaScript throws a Reference Error.",
     },
     {
       question: `
@@ -143,7 +143,7 @@ export const questionArray = {
       question: `
       What's the output?
 
-      class Chameleon {
+      class Car {
         static colorChange(newColor) {
           this.newColor = newColor;
           return this.newColor;
@@ -154,13 +154,13 @@ export const questionArray = {
         }
       }
 
-      const freddie = new Chameleon({ newColor: 'purple' });
-      console.log(freddie.colorChange('orange'));
+      const car = new Car({ newColor: 'purple' });
+      console.log(car.colorChange('orange'));
       `,
-      answers: ["orange", "purple", "green", "TypeError"],
+      answers: ["orange", "purple", "green", "Type Error"],
       correctAnswer: 3,
       reason:
-        "The colorChange function is static. Static methods are designed to live only on the constructor in which they are created, and cannot be passed down to any children or called upon class instances. Since freddie is an instance of class Chameleon, the function cannot be called upon it. A TypeError is thrown.",
+        "The colorChange function is static. Static methods are designed to live only on the constructor in which they are created, and cannot be passed down to any children or called upon class instances. Since freddie is an instance of class Chameleon, the function cannot be called upon it. A Type Error is thrown.",
     },
     {
       question: `
@@ -170,7 +170,7 @@ export const questionArray = {
       greetign = {}; // Typo!
       console.log(greetign);
       `,
-      answers: ["{}", "ReferenceError: greetign is not defined", "undefined"],
+      answers: ["{}", "Reference Error: greetign is not defined", "undefined"],
       correctAnswer: 0,
       reason:
         "It logs the object, because we just created an empty object on the global object! When we mistyped greeting as greetign, the JS interpreter actually saw this as global.greetign = {} (or window.greetign = {} in a browser). In order to avoid this, we can use use strict. This makes sure that you have declared a variable before setting it equal to anything.",
@@ -189,7 +189,7 @@ export const questionArray = {
         "Nothing, this is totally fine!",
         "SyntaxError. You cannot add properties to a function this way.",
         "Woof gets logged.",
-        "ReferenceError",
+        "Reference Error",
       ],
       correctAnswer: 0,
       reason:
@@ -212,14 +212,14 @@ export const questionArray = {
       console.log(member.getFullName());
       `,
       answers: [
-        "TypeError",
+        "Type Error",
         "SyntaxError",
         "Lydia Hallie",
         "undefined undefined",
       ],
       correctAnswer: 0,
       reason:
-        "In JavaScript, functions are objects, and therefore, the method getFullName gets added to the constructor function object itself. For that reason, we can call Person.getFullName(), but member.getFullName throws a TypeError.",
+        "In JavaScript, functions are objects, and therefore, the method getFullName gets added to the constructor function object itself. For that reason, we can call Person.getFullName(), but member.getFullName throws a Type Error.",
     },
     {
       question: `
@@ -240,7 +240,7 @@ export const questionArray = {
         `Person {firstName: "Lydia", lastName: "Hallie"} and undefined`,
         `Person {firstName: "Lydia", lastName: "Hallie"} and Person {firstName: "Sarah", lastName: "Smith"}`,
         `Person {firstName: "Lydia", lastName: "Hallie"} and {}`,
-        `Person {firstName: "Lydia", lastName: "Hallie"} and ReferenceError`,
+        `Person {firstName: "Lydia", lastName: "Hallie"} and Reference Error`,
       ],
       correctAnswer: 0,
       reason: `For sarah, we didn't use the new keyword. When using new, this refers to the new empty object we create. However, if you don't add new, this refers to the global object! We said that this.firstName equals "Sarah" and this.lastName equals "Smith". What we actually did, is defining global.firstName = 'Sarah' and global.lastName = 'Smith'. sarah itself is left undefined, since we don't return a value from the Person function`,
@@ -278,7 +278,7 @@ export const questionArray = {
 
       sum(1, '2');
       `,
-      answers: ["NaN", "TypeError", `"12"`, "3"],
+      answers: ["NaN", "Type Error", `"12"`, "3"],
       correctAnswer: 2,
       reason: `JavaScript is a dynamically typed language: we don't specify what types certain variables are. Values can automatically be converted into another type without you knowing, which is called implicit type coercion. Coercion is converting from one type into another. In this example, JavaScript converts the number 1 into a string, in order for the function to make sense and return a value. During the addition of a numeric type (1) and a string type ('2'), the number is treated as a string. We can concatenate strings like "Hello" + "World", so what's happening here is "1" + "2" which returns "12".`,
     },
@@ -336,7 +336,7 @@ export const questionArray = {
         } else if (data == { age: 18 }) {
           console.log('You are still an adult.');
         } else {
-          console.log(Hmm.. You don't have an age I guess);
+          console.log(You're ageless);
         }
       }
 
@@ -345,7 +345,7 @@ export const questionArray = {
       answers: [
         "You are an adult!",
         "You are still an adult.",
-        "Hmm.. You don't have an age I guess",
+        "You're ageless",
       ],
       correctAnswer: 2,
       reason:
@@ -377,7 +377,7 @@ export const questionArray = {
 
       getAge();
       `,
-      answers: ["21", "undefined", "ReferenceError", "TypeError"],
+      answers: ["21", "undefined", "Reference Error", "Type Error"],
       correctAnswer: 2,
       reason: `With "use strict", you can make sure that you don't accidentally declare global variables. We never declared the variable age, and since we use "use strict", it will throw a reference error. If we didn't use "use strict", it would have worked, since the property age would have gotten added to the global object.`,
     },

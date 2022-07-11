@@ -6,6 +6,7 @@ import { questionArray } from "../../Questions/questionArray";
 import { Button } from "@mui/material";
 import React, { useContext, useState } from "react";
 import { AddressContext } from "../../pages/Quiz";
+import EndGame from "../Extras/EndGame";
 
 const Answers_View = () => {
   /* STATES */
@@ -59,6 +60,8 @@ const Answers_View = () => {
 
   return (
     <div className={style.answers_container}>
+      {/* END OF GAME CHECK */}
+      {currentQuestion === 19 ? (<EndGame /> & setCurrentQuestion(0)) : null}
       <Stack direction="column" spacing={1} className={style.stack}>
         {/* MULTIPLE CHOICE ANSWERS */}
         {questionArray.javaScript[currentQuestion].answers.map((item, id) => (
